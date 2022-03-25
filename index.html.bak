@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="icon" type="image/png" sizes="32x32" href="images/abstractClimbing.PNG">
+		<title>A climbing info site</title>
+		<link rel="stylesheet" href="css/styleFile.css">
+	</head>
+
+	<img src="images/abstractClimbing.png" alt="Climbing watercolor">
+	<h1>
+		So you want to get into climbing, huh?
+	</h1>
+
+	<body>
+		<h2>
+		Great! Climbing is an amazing and fulfilling hobby that takes minutes to pick up and a lifetime to master!<br>
+		This website is your one-stop shop for basic climbing knowledge! Delve into the types of climbing, types
+		of <br>climbing shoes, kinds of chalk, and more! Happy sending!
+		</h2>
+
+		<hr>
+
+		<div class="grid-container">
+			<div class="grid-item">
+				<a href="typesOfClimbing.html" target="_blank" rel="noopener noreferrer"> 
+					<img src="images/indoorTopRope.jpg" height=300 width=300 alt="Female top roping indoors">
+					<h3>Types of Climbing</h3>
+				</a>
+			</div>
+
+			<div class="grid-item">
+				<a href="typesOfShoes.html" target="_blank" rel="noopener noreferrer">
+					<img src="images/moderateJeansClimber.jpg" height=300 width=300 alt="Climber wearing moderate shoes">
+					<h3>Types of Climbing Shoes</h3>
+				</a>
+			</div>
+
+			<div class="grid-item">
+				<a href="chalk.html" target="_blank" rel="noopener noreferrer">
+					<img src="images/chalkyHand.jpg" height=300 width=300 alt="Chalky hand">
+					<h3>Types of Chalk</h3>
+				</a>
+			</div>
+
+			<div class="grid-item">
+				<a href="technique.html" target="_blank" rel="noopener noreferrer">
+					<img src="images/crossoverTechnique.jpg" height=300 width=300 alt="Rose move">
+					<h3>Basic Climbing Techniques</h3>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>
