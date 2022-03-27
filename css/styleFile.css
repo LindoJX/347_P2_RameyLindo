@@ -18,8 +18,10 @@ img {
     display: grid;
     text-align: center;
     grid-template-columns: auto auto auto;
-    background-color: #777777;
+    background-color: #cfcfcf;
     padding: 10px;
+    position: relative;
+    width: 50%;
   }
 
 .grid-item {
@@ -48,3 +50,4 @@ img {
 .spacer{
     margin-bottom: 30px;
 }
+

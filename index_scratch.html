@@ -4,6 +4,53 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="images/abstractClimbing.PNG">
 		<title>A climbing info site</title>
 		<link rel="stylesheet" href="css/styleFile.css">
+        
+        <style>
+            .container {
+                display: grid;
+            position: relative;
+            width: 50%;
+          }
+          
+          .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+          }
+          
+          .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+          }
+          
+          .container:hover .image {
+            opacity: 0.3;
+          }
+          
+          .container:hover .middle {
+            opacity: 1;
+          }
+          
+          .text {
+            /* background-color: #727272; */
+            color: white;
+            font-size: 16px;
+            padding: 16px 32px;
+          }
+          a:visited { 
+              text-decoration: none; 
+              color: orange; 
+          }
+            </style>
 	</head>
 
 	<h1>
@@ -17,8 +64,67 @@
 		</h2>
 
 		<hr>
+        <div class="grid-container">
+        <div class="container">
+                <img src="images/indoorTopRope.jpg" class="image" alt="Female top roping indoors">
+                <div class = "middle">
+                        <!-- <div class="text">  -->
+                            <a href="typesOfClimbing.html"  rel="noopener noreferrer" class="visited">
+                                <h2> Types of Climbing </h2>
+                            </a>
+                        <!-- </div> -->
+                </div>
+            </div>
 
-		<div class="grid-container">
+            <div class="container">
+                <img src="images/moderateJeansClimber.jpg" class="image" alt="Climber wearing moderate shoes">
+                <div class = "middle">
+                        <div class="text"> 
+                            <a href="shoes.html"  rel="noopener noreferrer" class="visited">
+                                <h2> Types of Climbing Shoes </h2>
+                            </a>
+                        </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <img src="images/moderateJeansClimber.jpg" class="image" alt="Climber wearing moderate shoes">
+                <div class = "middle">
+                        <div class="text"> 
+                            <a href="shoes.html"  rel="noopener noreferrer" class="visited">
+                                <h2> Types of Climbing Shoes </h2>
+                            </a>
+                        </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="images/moderateJeansClimber.jpg" class="image" alt="Climber wearing moderate shoes">
+                <div class = "middle">
+                        <div class="text"> 
+                            <a href="shoes.html"  rel="noopener noreferrer" class="visited">
+                                <h2> Types of Climbing Shoes </h2>
+                            </a>
+                        </div>
+                </div>
+            </div>
+       
+       
+       
+       
+       
+       
+       
+       
+        </div>
+
+                <!-- <img src="images/indoorTopRope.jpg" alt="Avatar" class="image" style="width:100%">
+                    <div class="middle">
+                    <div class="text">John Doe</div>
+                    </div> -->
+                
+
+		<!-- <div class="grid-container">
 			<div class="grid-item">
 				<a href="typesOfClimbing.html"  rel="noopener noreferrer" :hover> 
 					<img src="images/indoorTopRope.jpg" height=300 width=300 alt="Female top roping indoors">
@@ -46,7 +152,7 @@
 					<h3> Basic Climbing Techniques </h3>
 				</a>
 			</div>
-		</div>
+		</div> -->
 
 		<hr>
 
