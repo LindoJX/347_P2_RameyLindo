@@ -3,16 +3,7 @@ body {
     background-color: #ececec
 }
 
-/* img {
-    display: block;
-    float: right;
-} */
 
-/* .example {
-    display: block;
-    margin-left: auto;
-    clear:both;
-} */
 
 .grid-container {
     display: grid;
@@ -194,7 +185,7 @@ Hide the images by default
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: rgb(138, 138, 138);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -204,7 +195,7 @@ Hide the images by default
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #000000;
   display: block;
   transition: 0.3s;
 }
