@@ -33,3 +33,21 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+
+var today = new Date();
+var hourNow = today.getHours();
+
+var greeting;
+
+if (hourNow > 18) {
+    greeting = 'Good evening climbers!';
+} else if (hourNow > 12) {
+    greeting = 'Good afternoon climbers!';
+} else if (hourNow > 0) {
+    greeting = 'Good morning climbers!';
+} else {
+    greeting = 'Welcome climbers!';
+}
+
+document.write('<h3>' + greeting + '</h3>');
