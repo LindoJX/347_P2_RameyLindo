@@ -20,10 +20,12 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i;
+  //Local variable
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
+  //For Loop
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
@@ -34,12 +36,13 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-
+//JS object
 var today = new Date();
 var hourNow = today.getHours();
 
 var greeting;
 
+//If/else Conditional
 if (hourNow > 18) {
     greeting = 'Good evening climbers!';
 } else if (hourNow > 12) {
