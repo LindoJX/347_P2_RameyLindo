@@ -8,6 +8,7 @@ body {
 .grid-container {
     display: grid;
     text-align: center;
+    width: viewport;
     grid-template-columns: auto auto auto auto auto;
     background-color: #cfcfcf;
     padding: 10px;
@@ -43,7 +44,8 @@ body {
 .container {
     display: grid;
 position: relative;
-width: 50%;
+/* width: 50%; */
+width: viewport;
 }
 
 .image {
