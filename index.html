@@ -155,9 +155,26 @@
 		<a href="https://www.youtube.com/channel/UC6-rliFvsdCUTZndrZTQjMA" target="_blank"  rel="noopener noreferrer"> Movement for Climbers </a> <br>
 
 <br><br><hr>
+<!-- <a href="login.php" target="_blank"  rel="noopener noreferrer"> Login</a> <br> -->
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
 
-    <form action="login.php" method="post">
-        <h2>LOGIN</h2>
+<h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
+    <p>
+        <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
+        <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+    </p>
+
+    <!-- <form action="login.php" method="post"> -->
+        <!-- <h2>LOGIN</h2>
 
         <?php if (isset($_GET['error'])) { ?>
 
@@ -173,7 +190,7 @@
 
         <input type="password" name="password" placeholder="Password"><br>
 
-        <button type="submit">Login</button>
+        <button type="submit">Login</button> -->
 
-    </form>
+    <!-- </form> -->
 </html>
