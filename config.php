@@ -4,7 +4,7 @@ server with default setting (user 'root' with no password) */
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'RameyTL');
 define('DB_PASSWORD', 'password123!');
-define('DB_NAME', 'users');
+define('DB_NAME', '347');
  
 /* Attempt to connect to MySQL database */
 try{
