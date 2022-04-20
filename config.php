@@ -2,8 +2,13 @@
 /* Database credentials. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 define('DB_SERVER', 'localhost');
+<<<<<<< Updated upstream
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'IP2lhw/@t');
+=======
+define('DB_USERNAME', 'RameyTL');
+define('DB_PASSWORD', 'password123!');
+>>>>>>> Stashed changes
 define('DB_NAME', 'users');
  
 /* Attempt to connect to MySQL database */
