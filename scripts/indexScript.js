@@ -35,10 +35,6 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
-setTimeout(
-    function redirect() {
-    window.location.href= "index.html"; // the redirect goes here
-},5000); // 5 seconds
 
 //JS object
 
