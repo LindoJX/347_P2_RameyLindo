@@ -35,33 +35,23 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+setTimeout(function redirect() {
+   window.location.href= "index.html"; // the redirect goes here
+
+},5000); // 5 seconds
 
 //JS object
+
 var today = new Date();
 var hourNow = today.getHours();
-
-//var greeting;
-//
-////If/else Conditional
-//if (hourNow > 18) {
-//    greeting = 'Good evening climbers!';
-//} else if (hourNow > 12) {
-//    greeting = 'Good afternoon climbers!';
-//} else if (hourNow > 0) {
-//    greeting = 'Good morning climbers!';
-//} else {
-//    greeting = 'Welcome climbers!';
-//}
-//
-//document.write('<h3>' + greeting + '</h3>');
 
 const greetings = ['Good evening climbers!', 'Good afternoon climbers!', 'Good morning climbers!',
                     'Welcome climbers!'];
 if (hourNow > 18)
 { document.write('<h3>' + greetings[0] + '</h3>') } //Good evening...
-else if (hourNow > 12)
+else if (hourNow > 12 && < 18)
 { document.write('<h3>' + greetings[1] + '</h3>') } //Good afternoon...
-else if (hourNow > 0)
+else if (hourNow > 0 && < 12)
 { document.write('<h3>' + greetings[2] + '</h3>') } //Good morning...
 else
 { document.write('<h3>' + greetings[3] + '</h3>') } //Welcome climbers!
