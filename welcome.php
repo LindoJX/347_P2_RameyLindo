@@ -16,7 +16,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <title>Welcome</title>
     <meta http-equiv="refresh" content="5;index.html" />
     <form action="index.html">
-        <input type="hidden" name="varname" value=($_SESSION["username"]) />
+        <input type="hidden" name="varname" value= <?php echo htmlspecialchars($_SESSION["username"]); ?></b> />
         <input type="submit" value="Send data">
     </form>
 
