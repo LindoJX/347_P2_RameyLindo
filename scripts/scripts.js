@@ -37,13 +37,21 @@ function showSlides(n) {
 var today = new Date();
 var hourNow = today.getHours();
 
+var greet;
+
 const greetings = ['Good evening climbers!', 'Good afternoon climbers!', 'Good morning climbers!',
                     'Welcome climbers!'];
 if (hourNow > 18)
-{ document.write('<h3>' + greetings[0] + '</h3>') } //Good evening...
+
+{ greet = greetings[0] }
+  //document.write('<h3>' + greetings[0] + '</h3>') } //Good evening...
 else if (hourNow > 12)
-{ document.write('<h3>' + greetings[1] + '</h3>') } //Good afternoon...
+{ greet = greetings[1] }
+  //document.write('<h3>' + greetings[1] + '</h3>') } //Good afternoon...
 else if (hourNow > 0)
-{ document.write('<h3>' + greetings[2] + '</h3>') } //Good morning...
+{ greet = greetings[2] }
+  //document.write('<h3>' + greetings[2] + '</h3>') } //Good morning...
 else
-{ document.write('<h3>' + greetings[3] + '</h3>') } //Welcome climbers!
+{ greet = greetings[3] }
+  //document.write('<h3>' + greetings[3] + '</h3>') } //Welcome climbers!
+document.write('<h3>' + greet + '</h3>');
