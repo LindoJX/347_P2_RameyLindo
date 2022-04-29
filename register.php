@@ -41,9 +41,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
     
+    $exp = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}";
+
     // Validate password
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter a password.";     
+    } else if (preg_match($exp, $_POST["password"])) {
+        $password_err = "Password must match Must contain at least one number and one uppercase and lowercase letter"
     } elseif(strlen(trim($_POST["password"])) < 6){
         $password_err = "Password must have atleast 6 characters.";
     } else{
