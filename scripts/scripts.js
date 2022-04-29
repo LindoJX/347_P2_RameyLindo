@@ -44,14 +44,16 @@ const greetings = ['Good evening climbers!', 'Good afternoon climbers!', 'Good m
 if (hourNow > 18)
 
 { greet = greetings[0] }
-  //document.write('<h3>' + greetings[0] + '</h3>') } //Good evening...
 else if (hourNow > 12)
-{ greet = greetings[1] }
-  //document.write('<h3>' + greetings[1] + '</h3>') } //Good afternoon...
+{ 
+  greet = greetings[1] 
+}
 else if (hourNow > 0)
-{ greet = greetings[2] }
-  //document.write('<h3>' + greetings[2] + '</h3>') } //Good morning...
+{ 
+  greet = greetings[2] 
+}
 else
-{ greet = greetings[3] }
-  //document.write('<h3>' + greetings[3] + '</h3>') } //Welcome climbers!
+{ 
+  greet = greetings[3] 
+}
 document.write('<h3>' + greet + '</h3>');
