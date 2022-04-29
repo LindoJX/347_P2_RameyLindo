@@ -14,11 +14,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-    <meta http-equiv="refresh" content="5;index.html" />
-    <form action="index.html">
+    <meta http-equiv="refresh" content="5;index.html" input type="hidden" name="varname" value= <?php echo htmlspecialchars($_SESSION["username"]); ?></b>/>
+    <!-- <form action="index.html">
         <input type="hidden" name="varname" value= <?php echo htmlspecialchars($_SESSION["username"]); ?></b> />
         <input type="submit" value="Send data">
-    </form>
+    </form> -->
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -28,7 +28,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <body>
     <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
     <h3> redirecting back to home... </h3>
-    localStorage.setItem('name', username);
+
     <p>
         <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
         <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
