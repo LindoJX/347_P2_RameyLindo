@@ -21,8 +21,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </form> -->
 
     <body onload="setTimeout(function() { document.frm1.submit() }, 5000)">
-        <form action="https://www.google.com" name="frm1">
-            <input type="hidden" name="varname" value= <?php echo htmlspecialchars($_SESSION["username"]); ?></b> />
+        <form action="index.html" name="frm1">
+            <input type="hidden" name="user" value= <?php echo htmlspecialchars($_SESSION["username"]); ?></b> />
         </form>
     </body>
 

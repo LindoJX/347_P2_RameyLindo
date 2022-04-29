@@ -10,20 +10,12 @@
 
 	</head>
 
-    <script language="JavaScript">
-        function processUser()
-        {
-          var parameters = location.search.substring(1).split("&");
-      
-          var temp = parameters[0].split("=");
-          l = unescape(temp[1]);
-          temp = parameters[1].split("=");
-          p = unescape(temp[1]);
-          document.getElementById("log").innerHTML = l;
-          document.getElementById("pass").innerHTML = p;
-        }
-      </script>
-
+    <script>
+        var url_string = window.location;
+        var url = new URL(url_string);
+        var user = url.searchParams.get("user");
+    </script>
+    
 
 <body>
 
@@ -84,6 +76,10 @@
 
 
 	<h1>
+        <script>
+             document.write("Welcome " + user);
+        </script>
+       
 		So you want to get into climbing, huh?
 	</h1>
 
