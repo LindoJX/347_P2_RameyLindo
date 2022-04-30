@@ -82,13 +82,44 @@
                 break namecheck;
             } else {
                 document.write("Welcome " + user + "!");
-                let text = "Click here to edit your account";
-                let result = text.link("accountinfo.html" + user.toString); 
+                // let text = "Click here to edit your account";
+                // let result = text.link("accountinfo.html" + user.toString); 
+                // string.link(<a href = "accountinfo.html"> account info </a>);
+
+
+                
+                
+                // Create anchor element.
+                var a = document.createElement('a'); 
+                  
+                // Create the text node for anchor element.
+                var link = document.createTextNode("Click here to edit your information");
+                  
+                // Append the text node to anchor element.
+                a.appendChild(link); 
+                  
+                // Set the title.
+                a.title = "Click here to edit your information"; 
+                  
+                // Set the href property.
+                a.href = "accountinfo.html"; 
+                  
+                // Append the anchor element to the body.
+                document.body.appendChild(a); 
+
+
+
             }
+            
         </script>
     </h1>
     <h1>
 		So you want to get into climbing, huh?
+
+        <form action="index.html" name="frm1">
+                    <input type="hidden" name="user" value= user >
+                </form>
+
 	</h1>
 
 		<h2>

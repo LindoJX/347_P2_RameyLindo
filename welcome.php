@@ -14,11 +14,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-    <!-- <meta http-equiv="refresh" content="5;index.html" input type="hidden" name="varname" value= <?php echo htmlspecialchars($_SESSION["username"]); ?></b>/> -->
-    <!-- <form action="index.html">
-        <input type="hidden" name="varname" value= <?php echo htmlspecialchars($_SESSION["username"]); ?></b> />
-        
-    </form> -->
+    
 
     <body onload="setTimeout(function() { document.frm1.submit() }, 5000)">
         <form action="index.html" name="frm1">
