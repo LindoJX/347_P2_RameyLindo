@@ -1,3 +1,14 @@
+<?php
+
+
+?>
+
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -41,6 +52,16 @@
             </script>
         </h1>
 
+        <h2>
+            Here you can update some information about yourself 
+            <form>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname">
+            </form>
+
+        </h2>
 		
 
 	</body>
