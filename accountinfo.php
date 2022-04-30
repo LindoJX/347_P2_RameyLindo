@@ -1,5 +1,72 @@
 <?php
+// Include config file
+require_once "config.php";
 
+// Define variables and initialize with empty values
+$interest = $length = "";
+$interest_err = $length_err = "";
+
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+ 
+    // Validate username
+    if(empty(trim($_POST["interest"]))){
+        $interest_err = "Please enter an interest.";
+    } else{
+        // Prepare a select statement
+        $sql = "SELECT id FROM users WHERE username = :username";
+        
+        if($stmt = $pdo->prepare($sql)){
+            // Bind variables to the prepared statement as parameters
+            $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
+            
+            // Set parameters
+            $param_username = trim($_POST["username"]);
+            
+            // Attempt to execute the prepared statement
+            if($stmt->execute()){
+                    $username = trim($_POST["username"]);
+            }
+
+            // Close statement
+            unset($stmt);
+        }
+    }
+    
+    
+    // Check input errors before inserting in database
+    if(empty($interest_err) && empty($time_err)){
+        
+        // Prepare an insert statement
+        $sql = "INSERT INTO interests (username, interest, length) VALUES (:username, :interest, :length)";
+         
+        if($stmt = $pdo->prepare($sql)){
+            // Bind variables to the prepared statement as parameters
+            $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
+            $stmt->bindParam(":interest", $param_interest, PDO::PARAM_STR);
+            $stmt->bindParam(":length", $param_length, PDO::PARAM_STR);
+
+            // Set parameters
+            $param_username = $username;
+            $param_interest = $interest;
+            $param_length = $length;
+            
+            // Attempt to execute the prepared statement
+            if($stmt->execute()){
+                // Redirect to login page
+                header("location: accountinfo.php");
+            } else{
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            unset($stmt);
+        }
+    }
+    
+    // Close connection
+    unset($pdo);
+}
 
 ?>
 
@@ -57,11 +124,6 @@
         <p>Here you can fill out some info about yourself.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-                <span class="invalid-feedback"><?php echo $username_err; ?></span>
-            </div>    
-            <div class="form-group">
                 <label>Interest</label>
                 <input type="text" name="interest" class="form-control">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
@@ -75,7 +137,6 @@
                 <input type="submit" class="btn btn-primary" value="Submit">
                 <input type="reset" class="btn btn-secondary ml-2" value="Reset">
             </div>
-            <p>Already have an account? <a href="login.php">Login here</a>.</p>
         </form>
     </div>   
 		
