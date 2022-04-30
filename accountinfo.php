@@ -38,7 +38,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($interest_err) && empty($time_err)){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO interests (username, interest, length) VALUES (:username, :interest, :length)";
+        $sql = "INSERT INTO interests (username, interest, lengthOfTime) VALUES (:username,
+        :interest,
+        :lengthOfTime)";
          
         if($stmt = $pdo->prepare($sql)){
             // Bind variables to the prepared statement as parameters
