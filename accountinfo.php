@@ -52,16 +52,32 @@
             </script>
         </h1>
 
-        <h2>
-            Here you can update some information about yourself 
-            <form>
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname">
-            </form>
-
-        </h2>
+        <div class="wrapper">
+        <h2>Account info</h2>
+        <p>Here you can fill out some info about yourself.</p>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                <span class="invalid-feedback"><?php echo $username_err; ?></span>
+            </div>    
+            <div class="form-group">
+                <label>Interest</label>
+                <input type="text" name="interest" class="form-control">
+                <span class="invalid-feedback"><?php echo $password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <label>How many years have you been interested in this activity?</label>
+                <input type="text" name="length" class="form-control">
+                <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Submit">
+                <input type="reset" class="btn btn-secondary ml-2" value="Reset">
+            </div>
+            <p>Already have an account? <a href="login.php">Login here</a>.</p>
+        </form>
+    </div>   
 		
 
 	</body>
