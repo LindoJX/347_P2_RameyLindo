@@ -8,6 +8,13 @@
 		<script src="scripts/scripts.js"></script>
 	</head>
 
+    <script>
+        var url_string = window.location;
+        var url = new URL(url_string);
+        var user = url.searchParams.get("user");
+
+    </script>
+
 	<body>
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -27,9 +34,9 @@
                 namecheck: if (user == null) {
                     break namecheck;
                 } else {
+
                     document.write("Welcome " + user + "!");
-                    let text = "Click here to edit your account";
-                    let result = text.link("accountinfo.html" + user.toString); 
+                    
                 }
             </script>
         </h1>

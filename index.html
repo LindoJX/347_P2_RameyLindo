@@ -102,7 +102,7 @@
                 a.title = "Click here to edit your information"; 
                   
                 // Set the href property.
-                a.href = "accountinfo.html"; 
+                a.href = "accountinfo.html?user=" + user; 
                   
                 // Append the anchor element to the body.
                 document.body.appendChild(a); 
@@ -113,6 +113,15 @@
             
         </script>
     </h1>
+
+    <!-- <h1>
+        <form action="accountinfo.html" name="frm1">
+            <input type="hidden" name= "user" value= user />
+        </form>
+
+    </h1> -->
+
+
     <h1>
 		So you want to get into climbing, huh?
 
