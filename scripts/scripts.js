@@ -1,3 +1,6 @@
+// Created by Thomas Ramey and Jake Lindo on 4/15/22
+// This file contains all of the general scripts used across the website
+
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }

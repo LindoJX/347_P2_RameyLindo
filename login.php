@@ -1,3 +1,6 @@
+<!-- Created by Thomas Ramey and Jake Lindo on 4/15/22 -->
+<!-- Allows users to log in -->
+
 <?php
 // Initialize the session
 session_start();

@@ -1,3 +1,6 @@
+<!-- Created by Thomas Ramey and Jake Lindo on 4/15/22 -->
+<!-- Allows users to reset their passwords in the DB -->
+
 <?php
 // Initialize the session
 session_start();

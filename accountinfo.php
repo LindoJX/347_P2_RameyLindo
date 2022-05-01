@@ -1,3 +1,6 @@
+<!-- Created by Thomas Ramey and Jake Lindo on 4/15/22 -->
+<!-- This page allows a user after they are signed in to edit some information about their account -->
+
 <?php
 // Include config file
 require_once "config.php";
