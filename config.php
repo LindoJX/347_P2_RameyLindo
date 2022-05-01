@@ -1,4 +1,5 @@
 <!-- Created by Thomas Ramey and Jake Lindo on 4/15/22 -->
+<!-- Contains configuration used for the database -->
 
 <?php
 /* Database credentials. Assuming you are running MySQL
