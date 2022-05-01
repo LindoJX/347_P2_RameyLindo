@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     // Check input errors before inserting in database
-    if(empty($interest_err) && empty($time_err)){
+//     if(empty($interest_err) && empty($time_err)){
 
         // Prepare an insert statement
         $sql = "INSERT INTO interests (username, interest, length) VALUES (:username, :interest, :length)";
@@ -63,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Close statement
             unset($stmt);
         }
-    }
+//     }
 
     // Close connection
     unset($pdo);
