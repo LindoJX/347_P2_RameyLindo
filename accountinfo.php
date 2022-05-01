@@ -6,25 +6,26 @@ require_once "config.php";
 
 // Define variables and initialize with empty values
 $interest = $length = "";
+$username = "";
 $interest_err = $length_err = "";
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
+
     // Validate username
     if(empty(trim($_POST["interest"]))){
         $interest_err = "Please enter an interest.";
     } else{
         // Prepare a select statement
         $sql = "SELECT id FROM users WHERE username = :username";
-        
+
         if($stmt = $pdo->prepare($sql)){
             // Bind variables to the prepared statement as parameters
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
-            
+
             // Set parameters
             $param_username = trim($_POST["username"]);
-            
+
             // Attempt to execute the prepared statement
             if($stmt->execute()){
                     $username = trim($_POST["username"]);
@@ -34,14 +35,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             unset($stmt);
         }
     }
-    
-    
+
+
     // Check input errors before inserting in database
-    if(empty($interest_err) && empty($time_err)){
-        
+//     if(empty($interest_err) && empty($time_err)){
+
         // Prepare an insert statement
-        $sql = "INSERT INTO interests (username, interest, length) VALUES (:username, :interest, :length)";
-         
+        $sql = "INSERT INTO interests /*(username, interest, length)*/ VALUES (:username, :interest,
+         :length)";
+
         if($stmt = $pdo->prepare($sql)){
             // Bind variables to the prepared statement as parameters
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
@@ -52,7 +54,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_username = $username;
             $param_interest = $interest;
             $param_length = $length;
-            
+
             // Attempt to execute the prepared statement
             if($stmt->execute()){
                 // Redirect to login page
@@ -64,8 +66,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Close statement
             unset($stmt);
         }
-    }
-    
+//     }
+
     // Close connection
     unset($pdo);
 }
