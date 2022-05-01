@@ -1,3 +1,5 @@
+<!-- Created by Thomas Ramey and Jake Lindo on 4/15/22 -->
+
 <?php
 // Include config file
 require_once "config.php";
@@ -46,9 +48,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate password
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter a password.";     
-    } else if (!preg_match($exp, $_POST["password"])) {
-        $password_err = "Must contain at least one number and one uppercase and lowercase letter";
-    } elseif(strlen(trim($_POST["password"])) < 6){
+    } 
+    //never got the regex working
+    // else if (!preg_match($exp, $_POST["password"])) {
+    //     $password_err = "Must contain at least one number and one uppercase and lowercase letter";
+    // } 
+    elseif(strlen(trim($_POST["password"])) < 6){
         $password_err = "Password must have atleast 6 characters.";
     } else{
         $password = trim($_POST["password"]);

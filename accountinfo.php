@@ -1,3 +1,5 @@
+<!-- Created by Thomas Ramey and Jake Lindo on 4/15/22 -->
+
 <?php
 // Include config file
 require_once "config.php";

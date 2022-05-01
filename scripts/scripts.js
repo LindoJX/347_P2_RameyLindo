@@ -1,3 +1,6 @@
+// Created by Thomas Ramey and Jake Lindo on 4/15/22
+
+
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }

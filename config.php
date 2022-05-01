@@ -1,3 +1,5 @@
+<!-- Created by Thomas Ramey and Jake Lindo on 4/15/22 -->
+
 <?php
 /* Database credentials. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
